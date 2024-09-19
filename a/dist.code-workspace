@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "../dist"
+		},
+		{
+			"path": "../pics"
+		},
+		{
+			"path": "../.vscode"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../scss"
+		},
+		{
+			"path": "../js"
+		},
+		{
+			"path": "../lib"
+		},
+		{
+			"path": "../css"
+		}
+	]
+}
