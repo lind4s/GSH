@@ -18,7 +18,7 @@
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
-  --gray-dark: #343a40;
+  --gray-dark: #03192e;
   --primary: #009CFF;
   --secondary: #F3F6FF;
   --success: #28a745;
@@ -26,7 +26,7 @@
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #FFFFFF;
-  --dark: #22395d;
+  --dark: #001029;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -58,7 +58,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #818491;
+  color: #3b3e56;
   text-align: left;
   background-color: #FFFFFF;
 }
@@ -218,7 +218,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #6c757d;
+  color: #032b4f;
   text-align: left;
   caption-side: bottom;
 }
@@ -275,7 +275,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+-webkit-appearance: button;
 }
 
 button:not(:disabled),
@@ -375,7 +375,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 1.2;
-  color: #22395d;
+  color: #012a6b;
 }
 
 h1, .h1 {
@@ -9676,15 +9676,60 @@ section {
 .dropdown:hover .dropdown-menu {
   display: block; /* Show on hover */
 }
-
-/* Change the dropdown headers' text color */
-.navbar-nav .nav-item .dropdown-menu .dropdown-item {
-  color: darkblue;  /* Change this to your desired color */
-}
-
-.navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
-  background-color: #007bff; /* Optional: Change the background color on hover */
-  color: darkblue; /* Optional: Change the text color on hover */
+ /* Custom style for carousel headings */
+.carousel-caption h3 {
+  color: white!important;
 }
 
 
+    /* General carousel styles */
+    .carousel-item {
+        height: 100vh; /* Full height for larger screens */
+        min-height: 400px; /* Ensure a minimum height for smaller screens */
+    }
+
+    .carousel-item img {
+        object-fit: cover; /* Makes sure the image covers the full carousel item on large screens */
+        width: 100%; /* Ensure the image always stretches horizontally */
+        height: 100%; /* Ensures image fills the container height */
+    }
+
+    /* Mobile view adjustments */
+    @media (max-width: 768px) {
+        .carousel-item {
+            height: auto; /* Allow flexible height on mobile devices */
+        }
+
+        .carousel-item img {
+            object-fit: contain; /* On mobile, the image will not crop and will be fully visible */
+            width: 100%;
+            height: auto; /* Allow the height to scale proportionally */
+        }
+
+        .carousel-caption {
+            bottom: 20px; /* Move the caption to the bottom */
+        }
+
+        .carousel-caption h3 {
+            font-size: 1.5rem; /* Adjust heading size */
+        }
+
+        .carousel-caption p {
+            font-size: 1rem; /* Adjust paragraph size */
+        }
+    }
+
+    /* Further adjustments for smaller screens, like phones */
+    @media (max-width: 576px) {
+        .carousel-caption h3 {
+            font-size: 1.2rem; /* Further reduce heading size */
+        }
+
+        .carousel-caption p {
+            font-size: 0.9rem; /* Further reduce paragraph size */
+        }
+    }
+
+
+   
+   
